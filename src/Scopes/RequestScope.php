@@ -97,7 +97,7 @@ class RequestScope implements Scope
 
                                 break; 		// eq|null
                             case 'include nulls': 	$query->orWhereNull($column); 			  	// ne|any_value
-                            // no break
+                                // no break
                             default:	$query->orWhere($column, $parsed['operator'], $value);	// eq|any_value
                         }
                     }
